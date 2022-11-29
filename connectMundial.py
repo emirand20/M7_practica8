@@ -18,6 +18,3 @@ cursor.execute(sql)
 # mostrar resultado
 registro = cursor.fetchall()
 print(registro)
-
-cursor.close()
-conexion.close()

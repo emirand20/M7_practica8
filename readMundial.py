@@ -9,12 +9,18 @@ conexion = psycopg2.connect(user='postgresUser',
 # creamos el metodo cursor
 cursor = conexion.cursor()
 
-# creamos sentencia sql
-sql = 'SELECT * FROM public."grupoA"'
+#Crear la sentencia sql
+sql='SELECT + FROM grupoA'
 
-# ejecutamos metodo execute
+# Metodo execute
 cursor.execute(sql)
 
-# mostrar resultado
-registro = cursor.fetchall()
+#mostar resultado 
+registro=cursor.fetchall()
+
+#mostar en consola
 print(registro)
+
+#cerrar conexciones
+cursor.close()
+conexion.close()

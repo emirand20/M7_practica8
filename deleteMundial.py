@@ -2,15 +2,13 @@
 import connectMundial
 
 # sentencia sql
-sql = 'DELETE FROM grupoA WHERE idgrupoA=%s'
-# DELETE FROM public."grupoA"
-# 	WHERE <condition>;
+sql = 'DELETE FROM public."grupoA" WHERE idgrupoa=%s'
 
 # solicitar dato al usuraio
-idgrupoA = input('ingrese el id del registro a eliminar: ')
+idgrupoa = input('ingrese el id del registro a eliminar: ')
 
 # metodo execute
-connectMundial.cursor.execute(sql, idgrupoA)
+connectMundial.cursor.execute(sql, idgrupoa)
 
 # guardar cambios
 connectMundial.conexion.commit()

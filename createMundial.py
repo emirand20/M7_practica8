@@ -2,17 +2,17 @@
 import connectMundial
 
 # crear sentencia sql
-sql = 'INSERT INTO public."grupoA"("idgrupoA", seleccion, pj, pt) VALUES(%s,%s,%s,%s)'
+sql = 'INSERT INTO public."grupoA"("idgrupoa", seleccion, pj, pt) VALUES(%s,%s,%s,%s)'
 
 
 # solicitud de datos al usuario
-idgrupoA = input('ingrese el id: ')
+idgrupoa = input('ingrese el id: ')
 seleccion = input('ingrese la seleccion: ')
 pj = input('ingrese los partidos jugados: ')
 pt = input('ingrese los puntos de dicha seleccion: ')
 
 # recoleccion de datos
-datos = (idgrupoA, seleccion, pj, pt)
+datos = (idgrupoa, seleccion, pj, pt)
 
 # hacer uso del metodo execute
 connectMundial.cursor.execute(sql, datos)
